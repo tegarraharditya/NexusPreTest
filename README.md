@@ -10,7 +10,8 @@ Once upon a time there is a web page (https://devexpress.github.io/testcafe/exam
 2. Tell us what kind of testcase you want to execute.
 
 
-3. We all know automation can help, show us your test-automation code to test it (Impress us by not using Katalon).
+3. We all know automation can help, show us your test-automation code to test it (Impress us by not using Katalon). <BR>
+   Please show us your work with integrate it with CircleCI , and capture the result.
 
 
 4. Every new employee at bizzy will have a buddy help him/her to tune in with environment. Every employee have their supervisor and team. Let's say that we have a table of employee where all the information mention earlier is store. The table specification is looks like this:<BR>
