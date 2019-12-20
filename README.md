@@ -10,7 +10,7 @@ Once upon a time there is a web page (https://devexpress.github.io/testcafe/exam
 2. Tell us what kind of testcase you want to execute.
 
 
-3. We all know automation can help, show us your test-automation code to test it (Impress us by not using Katalon). <BR>
+3. We all know automation can help, show us your test-automation code to test it with BDD Style and Please Impress us by not using Katalon. <BR>
    Please show us your work with integrate it with the CircleCI , and capture the result.
 
 
