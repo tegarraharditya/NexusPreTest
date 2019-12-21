@@ -21,10 +21,10 @@ jobs:
             - ./node_modules
       - run:
           name: run-selenoid
-          command: docker-compose up -d
+          command: cd selenoid && docker-compose up -d
       - run:
           name: test
-          command: npm run test-docker-chrome
+          command: cd .. && npm run test-docker-chrome
     #   - run:
     #       name: code-coverage
     #       command: './node_modules/.bin/nyc report --reporter=text-lcov'
