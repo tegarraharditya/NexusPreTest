@@ -1,0 +1,78 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "As a user I want to aaccess Testcafe Example pages",
+    "line": 1,
+    "id": "as-a-user-i-want-to-aaccess-testcafe-example-pages",
+    "tags": [],
+    "uri": "tests/features/exampe.feature",
+    "elements": [
+      {
+        "id": "as-a-user-i-want-to-aaccess-testcafe-example-pages;input-name",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Input name",
+        "tags": [
+          {
+            "name": "@desktop",
+            "line": 6
+          },
+          {
+            "name": "@example",
+            "line": 6
+          },
+          {
+            "name": "@clear",
+            "line": 6
+          },
+          {
+            "name": "@quit",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is in example page",
+            "match": {
+              "location": "tests/step_definitions/testcafe/example_steps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2904000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "user input name in Your Name field",
+            "match": {
+              "location": "tests/step_definitions/testcafe/example_steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "user will see name is filled",
+            "match": {
+              "location": "tests/step_definitions/testcafe/example_steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
