@@ -36,11 +36,14 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
+          name: pull-vnc-chrome
+          command: 'docker pull selenoid/vnc_chrome:68.0'
+      - run:
           name: run-selenoid
           command: cd selenoid && docker-compose up -d
       - run:
           name: test
-          command: npm run test-docker-chrome
+          command: cp env.sample .env && npm run test-docker-chrome
     #   - run:
     #       name: code-coverage
     #       command: './node_modules/.bin/nyc report --reporter=text-lcov'
