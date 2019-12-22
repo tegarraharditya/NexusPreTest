@@ -41,7 +41,7 @@ jobs:
           command: cd selenoid && docker-compose up -d
       - run:
           name: test
-          command: cp env.sample .env && npm test
+          command: npm test
     #   - run:
     #       name: code-coverage
     #       command: './node_modules/.bin/nyc report --reporter=text-lcov'
