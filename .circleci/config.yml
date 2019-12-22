@@ -40,7 +40,7 @@ jobs:
           command: cd selenoid && docker-compose up -d
       - run:
           name: test
-          command: cd .. && npm run test-docker-chrome
+          command: npm run test-docker-chrome
     #   - run:
     #       name: code-coverage
     #       command: './node_modules/.bin/nyc report --reporter=text-lcov'
