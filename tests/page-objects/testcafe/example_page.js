@@ -11,6 +11,7 @@ const examplePage = {
   },
   testData: {
     yourName: 'Genta Wibowo',
+    preferredInterfaceBoth: 'Both',
   },
   elements: {
     textFieldName: '#developer-name',
@@ -63,6 +64,9 @@ const examplePage = {
     },
     checkRadioLinux() {
       base.selectRadioButton(client, examplePage.elements.radioButtonLinux);
+    },
+    selectInterfaceOption() {
+      base.chooseOptionValue(client, examplePage.elements.listPreferredInterface, examplePage.testData.preferredInterfaceBoth);
     },
     inputYourComment() {
       base.setValueTextArea(client, examplePage.elements.textComments);

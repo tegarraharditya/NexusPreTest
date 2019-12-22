@@ -4,6 +4,6 @@ Background:
   Given user is in example page
 
 @desktop @example @clear @quit
-Scenario: Input name
+Scenario: User input all data
   When user input all necessary data
   Then thank you page with contributor name will appear
