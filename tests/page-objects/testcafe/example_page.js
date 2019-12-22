@@ -32,7 +32,7 @@ const examplePage = {
       return this.navigate();
     },
     inputYourName() {
-      base.setValueTextField(client, examplePage.testData.yourName);
+      base.setValueTextField(client, examplePage.elements.textFieldName, examplePage.testData.yourName);
     },
     checkRemoteTesting() {
       base.selectCheckbox(client, examplePage.elements.checkboxRemoteTesting);

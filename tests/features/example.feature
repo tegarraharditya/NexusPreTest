@@ -5,5 +5,5 @@ Background:
 
 @desktop @example @clear @quit
 Scenario: Input name
-  When user input name in Your Name field
-  Then user will see name is filled
+  When user input all necessary data
+  Then thank you page with contributor name will appear
