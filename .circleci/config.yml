@@ -2,8 +2,8 @@ version: 2.1
 jobs:
   build:
     working_directory: ~/NexusPreTest
-    docker:
-      - image: circleci/node:10.16.3
+    machine:
+      image: circleci/node:10.16.3
     steps:
       - checkout
       - setup_remote_docker
