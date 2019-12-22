@@ -4,7 +4,7 @@ report.generate({
   jsonDir: 'reports/chrome/',
   reportPath: 'reports/chrome/',
   displayDuration: true,
-  openReportInBrowser: true,
+  // openReportInBrowser: true,
   metadata: {
     browser: {
       name: 'chrome',

@@ -22,7 +22,7 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: install-npm-wee
-          command: npm install
+          command: npm ci
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
@@ -45,9 +45,8 @@ jobs:
     #   - run:
     #       name: code-coverage
     #       command: './node_modules/.bin/nyc report --reporter=text-lcov'
-    #   - store_artifacts:
-    #       path: test-results.xml
-    #       prefix: tests
+      - store_artifacts:
+          path: reports/chrome/index.html
     #   - store_artifacts:
     #       path: coverage
     #       prefix: coverage

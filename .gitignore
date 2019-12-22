@@ -1,3 +1,9 @@
 node_modules
 screenshots
-reports/chrome/cucumber_chrome.json
+reports/*
+reports/chrome/*.json
+!reports/chrome
+reports/chrome/assets/*
+reports/chrome/features/*
+reports/chrome/*.html
+!reports/chrome/create-html-report-chrome.js
