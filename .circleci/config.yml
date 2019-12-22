@@ -3,7 +3,8 @@ jobs:
   build:
     working_directory: ~/NexusPreTest
     machine:
-      image: circleci/node:10.16.3
+      # image: circleci/node:10.16.3
+      image: ubuntu-1604:201903-01
     steps:
       - checkout
       # - setup_remote_docker
