@@ -4,7 +4,6 @@ jobs:
     working_directory: ~/NexusPreTest
     docker:
       - image: circleci/node:10.16.3
-      - image: selenoid/vnc_chrome:68.0
     steps:
       - checkout
       - setup_remote_docker
