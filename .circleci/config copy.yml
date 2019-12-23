@@ -1,0 +1,73 @@
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # - image: circleci/node:chakracore-8.9.4-browsers
+      # - image: circleci/node:10.16.3
+      # - image: circleci/node:6.11.1-browsers
+      - image: karthikiyengar/node-nightwatch:0.0.1
+      # - image: circleci/node:jessie-browsers
+      # - image: selenium/standalone-chrome:3.1.0
+      # - image: selenium/node-chrome-debug:latest
+      # - image: selenium/hub:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      # - setup_remote_docker
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - save_cache:
+          key: v1-dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Copy Env
+          command: cp env.sample .env
+      # - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
+      # - run: |
+      #     sudo rm -rf /var/lib/apt/lists
+      - run: 
+          name: a
+          command: 'wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -'
+      - run: 
+          name: s
+          command: echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+      - run: echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
+      - run: sudo apt-get install google-chrome-stable
+
+      - run: 
+          name: install npm
+          command: npm install
+
+      # - run:
+      #     name: Download Selenium
+      #     command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      # - run:
+      #     name: Start Selenium
+      #     command: java -jar selenium-server-standalone-3.5.3.jar
+      #     background: true
+      
+      # - run: 
+      #     name: install grunt
+      #     command: sudo npm install grunt -g
+      # - run: 
+      #     name: launch grunt
+      #     command: grunt
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      # run tests!
+      - run: 
+          name: run test
+          command: npm run test2
+      # - store_artifacts:
+      #     path: 
+      #     - ./reports/chrome/create-html-report-chrome.js 
+      #     prefix: tests
