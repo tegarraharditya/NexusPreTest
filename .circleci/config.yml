@@ -3,19 +3,11 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      # - image: circleci/node:chakracore-8.9.4-browsers
-      # - image: circleci/node:10.16.3
-      # - image: circleci/node:6.11.1-browsers
-      # - image: karthikiyengar/node-nightwatch:0.0.1
-      - image: circleci/node:jessie-browsers
-      # - image: selenium/standalone-chrome:3.1.0
-      # - image: selenium/node-chrome-debug:latest
-      # - image: selenium/hub:latest
+      - image: circleci/node:8.15-browsers
+      - image: selenium/standalone-chrome:3.4.0
     working_directory: ~/repo
     steps:
       - checkout
-      # - setup_remote_docker
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
@@ -28,72 +20,10 @@ jobs:
       - run:
           name: Copy Env
           command: cp env.sample .env
-      # - run: sudo su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
-      # - run: |
-      #     sudo rm -rf /var/lib/apt/lists
-      # - run: 
-      #     name: a
-      #     command: 'wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -'
-      # - run: 
-      #     name: b
-      #     command: echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-      # - run: echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
-      # - run: sudo apt-get install google-chrome-stable
-
-      # - run: 
-      #     name: c
-      #     command: 'wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -'
-      # - run:
-      #     name: c
-      #     command: echo "deb [check-valid-until=no] http://cdn-fastly.deb.debian.org/debian jessie main" > /etc/apt/sources.list.d/jessie.list
-      # - run:
-      #     name: c
-      #     command: echo "deb [check-valid-until=no] http://archive.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/jessie-backports.list  
-      # - run: 
-      #     name: d
-      #     command: echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-      # - run: sed -i '/deb http:\/\/deb.debian.org\/debian jessie-updates main/d' /etc/apt/sources.list
-      # - run: apt-get -o Acquire::Check-Valid-Until=false update
-
-      # - run: echo "Acquire::Check-Valid-Until false;" | sudo tee -a /etc/apt/apt.conf.d/10-nocheckvalid
-      # - run: sudo apt-get install google-chrome-stable
-      # - run: #STABLE
-      #     name: Install Chromedriver latest version
-      #     command: |
-      #       sudo apt-get update
-      #       sudo apt-get install lsb-release libappindicator3-1
-      #       curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      #       sudo dpkg -i google-chrome.deb
-      #       sudo sed -i 's|HERE/chrome"|HERE/chrome" --no-sandbox|g' /opt/google/chrome/google-chrome
-      #       rm google-chrome.deb
-      # - run: #BETA
-      #     name: Install Chromedriver latest version
-      #     command: |
-      #       sudo apt-get update
-      #       sudo apt-get install lsb-release libappindicator3-1
-      #       curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb
-      #       sudo dpkg -i google-chrome.deb
-      #       sudo sed -i 's|HERE/chrome"|HERE/chrome" --no-sandbox|g' /opt/google/chrome-beta/google-chrome-beta
-      #       rm google-chrome.deb
 
       - run: 
           name: install npm
           command: npm install
-
-      # - run:
-      #     name: Download Selenium
-      #     command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
-      # - run:
-      #     name: Start Selenium
-      #     command: java -jar selenium-server-standalone-3.5.3.jar
-      #     background: true
-      
-      # - run: 
-      #     name: install grunt
-      #     command: sudo npm install grunt -g
-      # - run: 
-      #     name: launch grunt
-      #     command: grunt
 
       - save_cache:
           paths:
@@ -103,7 +33,6 @@ jobs:
       - run: 
           name: run test
           command: npm run test2
-      # - store_artifacts:
-      #     path: 
-      #     - ./reports/chrome/create-html-report-chrome.js 
-      #     prefix: tests
+
+      - store_test_results:
+          path: ~/reports/chrome/create-html-report-chrome.js

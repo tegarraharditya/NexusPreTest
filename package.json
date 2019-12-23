@@ -5,14 +5,14 @@
   "main": "",
   "scripts": {
     "test": "npm run test-docker-chrome; npm run report-chrome",
-    "test2": "npm run test-nw-chrome",
+    "test2": "npm run test-nw-chrome; npm run report-chrome",
     "test-nw-chrome": "node_modules/nightwatch/bin/nightwatch --config nightwatch_chrome.conf.js",
     "report-chrome": "node reports/chrome/create-html-report-chrome.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chromedriver": "^79.0.0",
+    "chromedriver": "^2.31.0",
     "dotenv": "^8.2.0",
     "eslint": "^5.0.1",
     "eslint-config-airbnb-base": "^13.0.0",
