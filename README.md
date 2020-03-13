@@ -1,13 +1,12 @@
 # QE NexusPreTest
 
-**Link to the answers** 
-
+***Link to the answers*** 
 ```
 The answers for the questions and other relevant info can be found in the below google doc
 https://drive.google.com/open?id=1hOfZhzYdy5GQssVwJn6v9Mw8bWMW2axW
 ```  
 
-**Tech Stack used in the project**
+***Tech Stack used in the project***
 ```
 1. Programming Language : Java
 2. Design Pattern: Page Object Model with Page Factory
@@ -19,14 +18,14 @@ https://drive.google.com/open?id=1hOfZhzYdy5GQssVwJn6v9Mw8bWMW2axW
 8. Reporting: Extent Reporting
 9. Source code Management: Github
 ```
-**Pre-requisites to run the Project**
+***Pre-requisites to run the Project***
 ```
 1. Java to be installed > 1.8
 2. Maven to be installed to run the tests locally in terminal
 3. Any IDE (Jetbeans/Eclipse) -Good to have but not mandatory`
 ```
 
-**Set up  & Execution Instructions**
+***Set up & Execution Instructions***
 ```
 1. Set Up Instructions
   a. Clone the repo into local using the command
@@ -42,7 +41,7 @@ https://drive.google.com/open?id=1hOfZhzYdy5GQssVwJn6v9Mw8bWMW2axW
      `mvn clean test -Dexecution_mode=BS`
 ```
 
-**Video Logs**
+***Video Logs***
 ```
 1. Local Mode
    <TBD>
