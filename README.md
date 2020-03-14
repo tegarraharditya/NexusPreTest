@@ -43,9 +43,9 @@ https://drive.google.com/open?id=1hOfZhzYdy5GQssVwJn6v9Mw8bWMW2axW
 
 ***Video Logs***
 ```
-1. Local Mode
-   <TBD>
-2. Remote Mode in Browserstack 
+1. Local Mode Execution
+   https://drive.google.com/open?id=1lpeEve4pYI-YUW5xbVpJqTckHMu-5x6K
+2. Remote Mode execution in Browserstack 
 Below is the video of the execution of 1 test case of the scenario file in browserstack. 
 https://drive.google.com/open?id=1TwDDLYkdfo5TQSqgvrEumTNPQPauJW_D
 ```

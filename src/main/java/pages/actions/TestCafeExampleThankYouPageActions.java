@@ -27,7 +27,6 @@ TestCafeExampleThankYouPageLocators  testCafeExampleThankYouPageLocators = null;
 			expected = "Peter Parker";
 		}
 		String actualText = testCafeExampleThankYouPageLocators.thankYouNameHeaderField.getText();
-		System.out.println(actualText);
 		assertTrue(actualText.contains(expected));
 	}
 

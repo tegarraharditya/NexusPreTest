@@ -21,9 +21,8 @@ public class TestCafeExampleSteps {
 	}
 	
 
-	@When("^I enter the  \"([^\"]*)\" in Name field$")
+	@When("^I enter the \"([^\"]*)\" in Name field$")
 	public void i_enter_the_in_Name_field(String userName) throws Throwable {
-		System.out.println("The passed name for this data is " + userName);
 		testCafeExampleLandingPageActions.enterNameInYourNameTextField(userName);
 	}
 	
@@ -70,7 +69,6 @@ public class TestCafeExampleSteps {
 
 	@Then("^I verify the \"([^\"]*)\" in Thank you page$")
 	public void i_verify_the_in_Thank_you_page(String arg1) {
-		System.out.println(arg1);
 		testCafeExampleThankYouPageActions.assertTheNameInThankYouPage(arg1);
 	}
 	
