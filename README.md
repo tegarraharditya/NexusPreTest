@@ -1,20 +1,59 @@
 # QE NexusPreTest
 
-  You can answer it as creative as you can, you can even show off what you know, use all the tools that you like, and send us your PR.
-Once upon a time there is a web page (https://devexpress.github.io/testcafe/example/) that need to assess how cool is the quality of the page. And here it comes your first task begin:
+***Link to the answers*** 
+
+`The answers for the questions and other relevant info can be found in the below google doc`
+https://drive.google.com/open?id=1hOfZhzYdy5GQssVwJn6v9Mw8bWMW2axW
 
 
-1. Tell us what kind of test should be conduct (plan and why) to make sure the page is ok.
+***Tech Stack used in the project***
+```
+1. Programming Language : Java
+2. Design Pattern: Page Object Model with Page Factory
+3. BDD layer: Cucumber
+4. Unit Testing framework: TestNG
+5. Dependency Management: Maven
+6. Remote Cross browser/Responsive Testing: Browserstack
+7. Continuous Integration: CircleCI
+8. Reporting: Extent Reporting
+9. Source code Management: Github
+```
+***Pre-requisites to run the Project***
+```
+1. Java to be installed > 1.8
+2. Maven to be installed to run the tests locally in terminal
+3. Any IDE (Jetbeans/Eclipse) -Good to have but not mandatory`
+```
 
+***Set up & Execution Instructions***
+```
+1. Set Up Instructions
+  a. Clone the repo into local using the command
+     `git clone https://github.com/mskumar1809/NexusPreTest.git`
+  b. Change directory into the root of the project
+     `cd NexusPreTest`  
+2. Execution Instructions
+  a. Local Mode ( Executes in the local machine)
+     run the command 
+     `mvn clean test`    
+  b. Remote Mode (Executes in Browser stack)
+     run the command 
+     `mvn clean test -Dexecution_mode=BS`
+```
 
-2. Tell us what kind of testcase you want to execute.
+***Video Logs***
+```
+ 1. Local Mode Execution
+    Below is the video of the local execution
+ ```
+   https://drive.google.com/open?id=1lpeEve4pYI-YUW5xbVpJqTckHMu-5x6K
+ ```  
+ 2. Remote Mode execution in Browserstack 
+    Below is the video of the execution of 1 test case of the scenario file in browserstack.
+ ```
+   https://drive.google.com/open?id=1TwDDLYkdfo5TQSqgvrEumTNPQPauJW_D
 
-
-3. We all know automation can help, show us your test-automation code to test it with BDD Style and Please Impress us by not using Katalon. <BR>
-   Please show us your work with integrate it with the CircleCI , and capture the result.
-
-
-4. Every new employee at NTUC will have a buddy help him/her to tune in with environment. Every employee have their supervisor and team. Let's say that we have a table of employee where all the information mention earlier is store. The table specification is looks like this:<BR>
-| employee_id | employee_name | buddy_id | supervisor_id | team_name |<BR>
-your task is to create a query to show:<BR>
-| employee_id | employee_name | buddy_name | supervisor_name | team_name |
+***Reporting***
+```
+The reports are automatically stored in the Extent Reports folder.
+```  
