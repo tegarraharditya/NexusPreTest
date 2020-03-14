@@ -1,10 +1,10 @@
 # QE NexusPreTest
 
 ***Link to the answers*** 
-```
-The answers for the questions and other relevant info can be found in the below google doc
+
+`The answers for the questions and other relevant info can be found in the below google doc`
 https://drive.google.com/open?id=1hOfZhzYdy5GQssVwJn6v9Mw8bWMW2axW
-```  
+
 
 ***Tech Stack used in the project***
 ```
